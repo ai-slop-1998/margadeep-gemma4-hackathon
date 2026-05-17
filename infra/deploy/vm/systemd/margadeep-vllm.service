@@ -1,0 +1,14 @@
+[Unit]
+Description=Margadeep local vLLM OpenAI-compatible inference server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/margadeep/margadeep.env
+ExecStart=/usr/local/bin/margadeep-run-vllm
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

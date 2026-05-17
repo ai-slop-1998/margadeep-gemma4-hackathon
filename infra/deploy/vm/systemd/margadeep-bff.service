@@ -1,0 +1,14 @@
+[Unit]
+Description=Margadeep Android/BFF API
+After=network-online.target margadeep-adk.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/margadeep/margadeep.env
+ExecStart=/usr/local/bin/margadeep-run-bff
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

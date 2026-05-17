@@ -1,0 +1,14 @@
+[Unit]
+Description=Margadeep ADK offline agent service
+After=network-online.target margadeep-mcp.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/margadeep/margadeep.env
+ExecStart=/usr/local/bin/margadeep-run-adk
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

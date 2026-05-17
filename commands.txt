@@ -1,0 +1,7 @@
+# Local command scratchpad
+
+# Keep credentials out of this file. Set provider API keys in your local shell,
+# an ignored .env file, or your platform secret manager.
+
+cd /path/to/agentic-autism-app/apps/backend
+adk web --port 8081 ./app/agents
